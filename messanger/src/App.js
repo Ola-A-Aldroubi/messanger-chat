@@ -1,10 +1,33 @@
+import React, { Component } from 'react';
+import "App.css";
+import LogInPage from './components/LogInPage';
+// import chat page ?
 
-import './App.css';
+export default class App extends Component {
 
-function App() {
-  return (
-   <h1>Messanger app</h1>
-  );
+  state = {
+    isLoggedIn: false,
+    messageHistory: [],
+    onlineUsers: [],
+    thisUser: ''
+  }
+
+  render() {
+
+    const { isLoggedIn, onlineUsers, messageHistory, thisUser } = this.state;
+
+    return (
+      <main>
+      {isLoggedIn ? <ChatPage messages={messageHistory} onlineUsers={onlineUsers} thisUser={thisUser} />
+      : <LogInPage users={onlineUsers} success={this.logIn} />
+      }
+      </main>
+    )
+  }
+
+  logIn = (username) => {
+    this.setState({isLoggedIn: true, thisUser: username})
+    // connect to socket, new log in event?
+  }
 }
 
-export default App;
