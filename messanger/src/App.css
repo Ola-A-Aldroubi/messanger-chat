@@ -2,3 +2,23 @@
   text-align: center;
 }
 
+#display-online-stat {
+  border: solid red 2px;
+  display: flex;
+  flex-direction: row;
+}
+
+.userCard {
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px grey solid;
+  background-color: aliceblue;
+  margin-left: 5%;
+}
+
+.avatar {
+  max-width: 100px;
+  max-height: auto;
+}

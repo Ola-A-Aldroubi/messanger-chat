@@ -1,10 +1,11 @@
 
 import './App.css';
+import DisplayComponents from './components/DisplayComponents';
 
 function App() {
   return (
-   <h1>Messanger app</h1>
-  );
+    <DisplayComponents />
+  )
 }
 
 export default App;
