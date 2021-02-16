@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "App.css";
 import LogInPage from './components/LogInPage';
 // import chat page ?
 
